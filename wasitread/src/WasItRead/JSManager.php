@@ -86,12 +86,6 @@ class JSManager {
 
     function add_js_scripts()
     {
-        // Deregister the included library
-        wp_deregister_script( 'jquery' );
-
-        // Register the library again from Google's CDN
-        wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', array(), null, false );
-
         // Register the script like this for a plugin:
         wp_register_script( 'scroll-script', $this->plugin_directory.'js/jquery.scrolldepth.min.js', array( 'jquery' ) );
 
